@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Best Practices</title>
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>[endif]-->
+</head>
+<body>
+	<header>
+		<hgroup>
+			<h1>Website Best Practices</h1>
+			<h2>Developing the best possible websites.</h2>   
+     </hgroup>
+  </header>
+	<nav role="navigation">
+		<ul>
+			<li><a href="#About">About</a></li>
+			<li><a href="#Work">Work</a></li>
+			<li><a href="#Contact">Contact</a></li>
+  		</ul>
+    </nav>
+    
+    Web Standards:
+    Content in HTML, Visual design in CSS, Functionality &amp; enhancements in JavaScript
+    The Six Rules of HTML: 
+    <ol>
+      <li>Every valid HTML document's very first line must be a DOC-TYPE declaration</li>
+      <li>Every tag that opens around taxt content must close</li>
+      <li>Tags close in the opposite order that they open</li>
+      <li>All tag elements and attributes, and some attribute values, must be lowercase letters</li>
+      <li>All attribute values must appear in quotation marks, immediately following the equals sign</li>
+      <li>All class and id values should begin with a letter. and must not contain spaces</li>
+    </ol>
+    Global Structure of HTML: 
+    <ul>
+      <li>html-root element; the tag that contains the entire webpage &amp; should have atleast the "lang" attribute</li>
+      <li>head-tag before the "body" tag that contains metadata, must contain contain two important tags: title-the title of the page that appears in the title bar/tab of web browsers &amp; bookmarks (CH15). meta-tag with a "charset="utf-8"" attribute that informs browsers &amp;search engines of page encoding</li>
+      <li>body-tag contains all the page content that is expected to be visible in a browser's viewport</li>
+      <li>[link to HTML5 template]</li>
+    </ul>
+  
+    CSS-Cascading Style Sheets: 
+    <ul>
+      <li>describe the visual presentation &amp; design of webpages, including typography, color &amp; page layout</li>
+      <li>CSS controls the appearance of all content structure of HTML</li>
+      <li>CSS rules written near the top of the file will be rendered first &amp; rules near the bottom can override identical styles near the top</li>
+    
+    </ul>
+    A list of rules (rulesets) that are comprised of two parts: a <em>selector</em>, which specifies which structural parts of the HTML document will be styled &amp; a <em>declaration block</em>, which uses curly braces to group a list of one or more <em>style properties</em> &amp; their values. Some properties take a single value &amp; others take multiple values. 
+    <pre><code>selector{
+      property: value;
+    }
+    </code></pre>
+    The basic CSS selectors are HTML tags; (<em>Element selectors</em> or <em>Type selectors</em>):
+    <pre><code>body {
+      background-color: lightgrey;
+      color: blue;
+    }
+    
+h1 {
+      background-color: black;
+      color: white;
+    }
+    </code></pre>
+    <em>Class selectors</em> begin with a dot &amp; <em>ID selectors</em> begin with a hash:
+    <pre><code>.warning {
+      color: red;
+      font-weight: bold;
+    }
+    
+#instructions {
+      background-color: black;
+      color: white;
+    }
+    </code></pre>
+    <em>Attribute Selectors</em> turn any HTML attribute into a CSS selector with a more complicated syntax 
+    <ul>
+      <li><code>[attr]</code> selects any element with the <em>attr</em> attribute: <code>img[alt]</code> will select all image tags with an <em>alt</em> attribute</li>
+      <li><code>[attr="value"]</code> selects any element with the <em>attr</em> whose value is exactly <em>value</em>:<code>*[lang="de"]</code> will select any HTML element with <em>de (German)</em> as its <em>lang</em> attribute</li>
+      <li><code>[attr^="value"]</code> selects any element with the <em>attr</em> attribute whose value BEGINS WITH <em>value</em>:
+      <pre><code>a [href^="http"] { 
+        color: green 
+      }</code></pre> will make all external links green</li>
+      <li><code>[attr$="value"]</code> selects any element with the <em>attr</em> attribute whose value ENDS WITH <em>value</em>: <code>a[href$=".com"]</code> selects all anchor tags with links pointing to <em>.com</em> domains</li>
+      <li><code>[attr*="value"]</code> selects any element with the <em>attr</em> attribute whose value contains <em>value</em> atleast once: <code>img[src*="cat"]</code> will select any image tag whose <em>src</em> attribute refers to an image file with <em>cat</em> somewhere in the file name or path</li>
+    </ul>
+    <em>Pseudoclass Selectors</em> select an element based on either user behavior or the structure of the HTML document. The more common pseudoclass selectors are used for styling link text appearing inside the <em>a-anchor tag</em>:
+    <ul>
+      <li><code>:link</code> styles a link in its unvisited state</li>
+      <li><code>:visited</code> styles a link that has been visited</li>
+      <li><code>:hover</code> styles a link when a mouse pointer is hovering over it (usually combined with <em>focus</em>)</li>
+      <li><code>:focus</code> styles a link that has been tabbed to by the keyboard</li>
+      <li><code>:active</code> styles a link during the brief moment that it has been activated by an action (mouse click, tap, Return)</li>
+    </ul>
+    <pre><code>a, a:link {
+      color: green;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
+    a:visited { color: red; }
+    </code></pre>
+
+    
+    Responsive Web Design:
+    Fluid Grids (CH18)
+    Flexible Images (CH19)
+    Media Queries (CH14)
+    Meta Tags (CH14, CH20)
+    DIV Element has no semantic value "an element of last resort"
+    Class &amp; ID (CH16)
+    <ul><li>id-value can only be used once per page &amp; any given HTML tag can only have a single id value per page, should always be lowercase letters &amp; hyphens</li>
+      <li>class-value to associate similar repeating structures; add to any tag requiring more specific structure in CSS and enhancing DOM scripting, should always be lowercase letters &amp; hyphens</li></ul>
+    Creative Commons License (CH25)
+    TOOLS
+    Text Editor: Notepad++, TextPad 8
+    Code Editor: Visual Studio Code
+    WYSIWYG: Dreamweaver
+    Image Editor: GIMP
+    Audio Editor: Audacity
+    Video editor: Blender
+    Development Browsers:
+    Firefox Developer Edition
+    Chrome with Chris Pederick's Web Developer Add-on
+    Development Server:
+    <a href="https://nodejs.org/">Node.js http-server</a>
+    <a href="https://letsencrypt.org/">Secure HTTP</a>
+    Online Identity
+    Strong Passwords: be creative, use a password manager; not dictionary words, username, or all numbers
+    Be interesting, Get to the point, Frequent activity, Write once - publish everywhere &amp; often, Share &amp; Network - connect with others
+    Social Bookmarking: Pintrest
+    Professional Networking: LinkedIn
+    Photo Sharing: Instagram/Flickr 
+    Video Sharing: YouTube/Vimeo
+    Only use tables for table data &amp; don't use frames! Use relative units (em, %) not absolute units (px). Don't use Word Processor for authoring content! Flash is dead! 
+
+
+    Reference sites:
+
+    <a href="https://www.w3.org/">Web Standards</a>
+    <a href="http://validator.w3.org">Markup Validation</a>
+    <a href="http://jigsaw.w3.org/cssvalidator">CSS Validation</a>
+    <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>
+    <a href="https://webpg.es/">Karl Stolley</a>
+    <a href="https://stuffandnonsense.co.uk/archives/css_specificity_wars.html">CSS Specificity Wars</a>
+    <a href="https://staysafeonline.org">National Cyber Security Alliance</a>
+    <a href="https://ssd.eff.org">Electronic Frontier Foundation's Surveillance Self-Defense</a>
+    <a href="http://namechk.com">Check Domain Names</a>
+    <a href="http://csszengarden.com/">CSS Demo</a>
+</body>
+</html>
