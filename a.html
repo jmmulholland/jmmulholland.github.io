@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="James Mulholland is a Digital Artist, IT Support Specialist; a Technology and Design Consultant in Syracuse, NY. the 21st Century Renaissance Man project is an effort by James and Artificial Intelligence.">
+<link rel="stylesheet" href="css/w3a.css">
+<title>21st Century Renaissance Man Slideshow by James Mulholland</title>
+
+</head>
+<body bgcolor="#000">
+
+<h2>James Mulholland</h2>
+<p> is a Digital Artist, IT Support Specialist; a Technology and Design Consultant in Syracuse, NY. the 21st Century Renaissance Man project is an effort by James and Artificial Intelligence.</p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+
+  <img src="../2023_site/media/img/1.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="../2023_site/media/img/3.jpg" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+    
+    <img src="../2023_site/media/img/2.jpg" style="width:100%">
+    
+  </div>
+  <div class="mySlides fade">
+    
+    <img src="../2023_site/media/img/4.jpg" style="width:100%">
+    
+  </div>
+  
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>  
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+<nav>
+  
+  <button class="btn info"><a href="#">ENTER</a></button>
+</nav>
+  <footer class="w3-display-bottommiddle"> &copy;2023 jmmulholland.com</footer>
+</body>
+</html> 
