@@ -16,18 +16,18 @@ body {
     position: relative;
     background: black;
     height: 800px;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     padding: 1px;
     resize: both;
     overflow: visible;
-    border: 1px solid teal;
+    border: 3px solid cyan;
   }
   
   .main div {
     background: black;
     
-    width: 80%;
+    width: 90%;
     transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
@@ -35,7 +35,7 @@ body {
     padding: 5px;
     resize: both;
     overflow: auto;
-    border: 1px solid #1899D6;
+    border: 3px solid turquoise;
   }
 
 
